@@ -1,0 +1,27 @@
+Khin Htet Htet Khine
+Perth, Australia
+Email: khinhtethtetkhine965@gmail.com | Phone: +66 9861 47615
+
+Date: February 7, 2026
+
+Hiring Manager
+Fortescue
+Perth, Australia
+
+Re: Senior Test Analyst
+
+Dear Hiring Manager,
+
+I am writing to apply for the Senior Test Analyst role with Fortescue in Perth. With 5+ years of experience delivering quality outcomes across integration-heavy fintech and digital platforms, I bring strong test planning, stakeholder engagement, and UAT leadership capabilities that align closely with this opportunity.
+
+In my current role as Senior Specialist – Quality Assurance at ANT International (2c2p), I develop test plans, design and execute comprehensive manual test cases, and validate complex web and API integrations. I translate business needs into clear acceptance criteria, test artifacts, and traceable outcomes, while partnering with developers and product teams to resolve defects efficiently in Jira. I also coordinate UAT cycles, supporting business users through structured test execution and providing clear reporting on risks and readiness.
+
+Earlier, at KBZPay, I led UAT and regression testing for a high-traffic e-wallet platform, ensuring releases met functional and non-functional expectations. As a Product Associate at CitizensPay, I worked across legacy and integrated systems and strengthened documentation and testing practices to improve delivery quality and stakeholder confidence.
+
+Fortescue’s commitment to building transformative technology and its inclusive, values-driven culture are compelling. I am excited by the opportunity to bring my quality mindset, analytical approach, and collaborative style to your Custom Solutions team and contribute to reliable software that supports critical operational functions.
+
+I would welcome the chance to discuss how my experience in test planning, integration validation, and cross-functional delivery can support Fortescue’s goals. Thank you for your time and consideration.
+
+Sincerely,
+
+Khin Htet Htet Khine

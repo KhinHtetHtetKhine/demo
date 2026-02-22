@@ -1,0 +1,87 @@
+Khin Htet Htet Khine
+Business Analyst / Test Analyst
+Perth, Australia | 482 Dependant Visa Holder
+Email: khinhtethtetkhine965@gmail.com | Phone: +66 9861 47615
+LinkedIn: (link) | GitHub: (link) | Portfolio: (link)
+
+PROFESSIONAL SUMMARY
+Senior Test Analyst with 5+ years of experience across integration-heavy fintech and digital platforms. Known for bringing clarity to ambiguity, translating business problems into testable outcomes, and coordinating UAT to deliver fit-for-purpose releases. Strong stakeholder communicator who bridges business and technical teams, with hands-on expertise in manual testing, API validation, and defect management in Agile delivery environments.
+
+CORE COMPETENCIES
+- Test Strategy and Planning (functional, regression, integration, UAT, performance)
+- Test Case Design, Traceability, and Documentation
+- Manual Testing, Defect Lifecycle Management, and STLC
+- API and Integration Validation (REST, JSON)
+- Requirements Analysis and Acceptance Criteria
+- Stakeholder Communication and Cross-Functional Collaboration
+- Test Management and Reporting (Jira, Confluence)
+- SQL Data Validation and Excel Analysis
+- CI/CD Awareness and Automation Collaboration
+
+TOOLS AND TECHNOLOGIES
+- Automation: Robot Framework, Python, Selenium, Playwright
+- API and Performance: Postman, JMeter
+- DevOps: GitLab CI, Docker
+- Test Management and Collaboration: Jira, Confluence
+- Data: SQL, Excel
+
+TESTING APPROACH HIGHLIGHTS
+- Build test plans from business requirements, risks, and integration points.
+- Ensure coverage across functional, regression, integration, UAT, and performance activities.
+- Design clear, traceable test cases with preconditions, data, and expected outcomes.
+- Validate APIs and data integrity using Postman and SQL checks.
+- Provide concise reporting on test progress, defects, risks, and release readiness.
+- Advocate practical improvements to testing processes and documentation.
+
+PROFESSIONAL EXPERIENCE
+
+Senior Specialist – Quality Assurance
+ANT International (2c2p) | Thailand & Myanmar | Jul 2022 – Present
+Fintech Platform | Web and API Integrations
+- Design and execute manual test cases aligned with STLC best practices in Agile delivery.
+- Develop test plans and test suites based on business requirements and risk areas.
+- Translate stakeholder input into clear requirements, acceptance criteria, process flows, and test artifacts.
+- Validate integration flows across web services and APIs using Postman and SQL checks.
+- Log, track, and verify defects in Jira; partner with developers to confirm fixes.
+- Coordinate and support UAT cycles, guiding business users through structured testing and sign-off.
+- Provide clear test reporting and risk visibility to product and delivery teams.
+
+Selected Contributions
+- Defined test scope and coverage for features spanning web UI, APIs, and third-party integrations.
+- Improved traceability between requirements, test cases, and defects to support audit-ready documentation.
+- Standardized UAT support materials, helping business users execute tests consistently.
+- Collaborated with product owners and developers to clarify ambiguous requirements early, reducing rework.
+
+Senior UAT Tester
+KBZPay | Myanmar | Sep 2021 – Jul 2022
+Banking Platform | E-Wallet Mobile Application
+- Executed UAT and regression testing to ensure delivery aligned with business intent.
+- Managed defects end-to-end and ensured resolutions met functional and non-functional needs.
+- Supported release readiness through validation, change communication, and user guidance.
+- Contributed to continuous improvement in documentation standards and testing practices.
+
+Selected Contributions
+- Ensured critical user journeys (top-up, transfer, payment) met acceptance criteria before release.
+- Coordinated defect retesting and regression checks to confirm stability after fixes.
+- Partnered with stakeholders to validate business rules and edge cases.
+
+Product Associate
+CitizensPay | Myanmar | Sep 2020 – Sep 2021
+Fintech Platform | Mobile Application
+- Validated end-to-end flows across integrated and legacy systems, including third-party services.
+- Supported requirement clarification, documentation, and test artifacts for delivery teams.
+- Built trust with stakeholders through proactive communication and reliable delivery support.
+
+Selected Contributions
+- Mapped process flows and identified integration risks during requirement reviews.
+- Improved consistency of test documentation and acceptance criteria.
+
+EDUCATION AND CERTIFICATIONS
+- ISTQB Foundation Level v4.0, 2024
+- CS50's Introduction to Computer Science, HarvardX, 2022
+- Associate Degree, Computer Science, University of the People, 2022 – 2023
+- Bachelor of Arts, English, University of Yangon, 2016 – 2019
+
+ADDITIONAL INFORMATION
+Work Rights: 482 Dependant Visa Holder
+Availability: Monday to Friday roster | Perth-based
