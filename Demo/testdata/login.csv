@@ -1,0 +1,5 @@
+testCaseNumber,testCase,username,password,expectedResult,expectedMessage
+TC_LOGIN_001,Valid login,standard_user,secret_sauce,success,
+TC_LOGIN_002,Invalid password,standard_user,wrong_password,error,Epic sadface: Username and password do not match any user in this service
+TC_LOGIN_003,Locked out user,locked_out_user,secret_sauce,error,Epic sadface: Sorry, this user has been locked out.
+TC_LOGIN_004,Intentional failure,standard_user,wrong_password,error,This message is intentionally incorrect for report demo
