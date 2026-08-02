@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(__dirname, `.env.${env}`) });
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  reporter: [['html'], ['list']],
+  reporter: [['html'], ['list'], ['json', { outputFile: 'playwright-report/results.json' }]],
   use: {
     baseURL: process.env.BASE_URL ?? 'https://www.saucedemo.com',
     trace: 'on',

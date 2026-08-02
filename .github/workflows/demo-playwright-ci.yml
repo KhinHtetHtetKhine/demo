@@ -55,10 +55,10 @@ jobs:
       - name: Post test summary
         if: always()
         run: |
-          REPORT="playwright-report/index.html"
-          PASSED=$(grep -o '[0-9]* passed' $REPORT | grep -o '[0-9]*' | head -1 || echo 0)
-          FAILED=$(grep -o '[0-9]* failed' $REPORT | grep -o '[0-9]*' | head -1 || echo 0)
-          SKIPPED=$(grep -o '[0-9]* skipped' $REPORT | grep -o '[0-9]*' | head -1 || echo 0)
+          RESULTS="playwright-report/results.json"
+          PASSED=$(node -e "const r=require('./$RESULTS'); console.log(r.stats.expected)" 2>/dev/null || echo 0)
+          FAILED=$(node -e "const r=require('./$RESULTS'); console.log(r.stats.unexpected)" 2>/dev/null || echo 0)
+          SKIPPED=$(node -e "const r=require('./$RESULTS'); console.log(r.stats.skipped)" 2>/dev/null || echo 0)
           echo "## 🎭 Playwright Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Status | Count |" >> $GITHUB_STEP_SUMMARY
