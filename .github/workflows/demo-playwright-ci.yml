@@ -59,6 +59,7 @@ jobs:
           PASSED=$(node -e "const r=require('./$RESULTS'); console.log(r.stats.expected)" 2>/dev/null || echo 0)
           FAILED=$(node -e "const r=require('./$RESULTS'); console.log(r.stats.unexpected)" 2>/dev/null || echo 0)
           SKIPPED=$(node -e "const r=require('./$RESULTS'); console.log(r.stats.skipped)" 2>/dev/null || echo 0)
+          REPORT_URL="https://khinhtethtetkhine.github.io/demo/playwright-report/"
           echo "## 🎭 Playwright Test Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Status | Count |" >> $GITHUB_STEP_SUMMARY
@@ -67,7 +68,8 @@ jobs:
           echo "| ❌ Failed  | ${FAILED:-0} |" >> $GITHUB_STEP_SUMMARY
           echo "| ⏭ Skipped | ${SKIPPED:-0} |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "📋 [View full report on GitHub Pages](https://khinhtethtetkhine.github.io/demo/playwright-report/)" >> $GITHUB_STEP_SUMMARY
+          echo "📋 [View full report on GitHub Pages]($REPORT_URL)" >> $GITHUB_STEP_SUMMARY
+          echo "::notice title=Playwright Report::View full report at $REPORT_URL"
 
       - name: Upload Playwright report
         if: always()
