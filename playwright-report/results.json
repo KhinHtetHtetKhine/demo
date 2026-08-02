@@ -18,24 +18,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/f0e60aa480b918914f097feaa113d8398bd3d1c4",
-        "commitHash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
-        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30737424936"
+        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/3d12f2b0e97091552693373bb6fd081e662cc447",
+        "commitHash": "3d12f2b0e97091552693373bb6fd081e662cc447",
+        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30738084648"
       },
       "gitCommit": {
-        "shortHash": "f0e60aa",
-        "hash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
-        "subject": "ci: add notice annotation with report URL to Actions run view",
-        "body": "ci: add notice annotation with report URL to Actions run view\n",
+        "shortHash": "3d12f2b",
+        "hash": "3d12f2b0e97091552693373bb6fd081e662cc447",
+        "subject": "ci: add root redirect to playwright-report on GitHub Pages",
+        "body": "ci: add root redirect to playwright-report on GitHub Pages\n",
         "author": {
           "name": "OFFICE\\khinhtethtetkhine",
           "email": "khinhtethtet@2c2p.com",
-          "time": 1785654868000
+          "time": 1785656087000
         },
         "committer": {
           "name": "OFFICE\\khinhtethtetkhine",
           "email": "khinhtethtet@2c2p.com",
-          "time": 1785654868000
+          "time": 1785656087000
         },
         "branch": "main"
       },
@@ -49,24 +49,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/f0e60aa480b918914f097feaa113d8398bd3d1c4",
-            "commitHash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
-            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30737424936"
+            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/3d12f2b0e97091552693373bb6fd081e662cc447",
+            "commitHash": "3d12f2b0e97091552693373bb6fd081e662cc447",
+            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30738084648"
           },
           "gitCommit": {
-            "shortHash": "f0e60aa",
-            "hash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
-            "subject": "ci: add notice annotation with report URL to Actions run view",
-            "body": "ci: add notice annotation with report URL to Actions run view\n",
+            "shortHash": "3d12f2b",
+            "hash": "3d12f2b0e97091552693373bb6fd081e662cc447",
+            "subject": "ci: add root redirect to playwright-report on GitHub Pages",
+            "body": "ci: add root redirect to playwright-report on GitHub Pages\n",
             "author": {
               "name": "OFFICE\\khinhtethtetkhine",
               "email": "khinhtethtet@2c2p.com",
-              "time": 1785654868000
+              "time": 1785656087000
             },
             "committer": {
               "name": "OFFICE\\khinhtethtetkhine",
               "email": "khinhtethtet@2c2p.com",
-              "time": 1785654868000
+              "time": 1785656087000
             },
             "branch": "main"
           },
@@ -141,17 +141,17 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1345,
+                      "duration": 2227,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3064] Acquiring lock for \"standard_user\"\n"
+                          "text": "[Worker 2849] Lock detected — waiting for \"standard_user\" auth to complete\n"
                         },
                         {
-                          "text": "[Worker 3064] Logging in as \"standard_user\"\n"
+                          "text": "[Worker 2849] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3064] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
+                          "text": "[Worker 2849] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -159,14 +159,14 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 192
+                          "duration": 122
                         },
                         {
                           "title": "Verify product count is 6",
-                          "duration": 183
+                          "duration": 100
                         }
                       ],
-                      "startTime": "2026-08-02T07:15:14.204Z",
+                      "startTime": "2026-08-02T07:35:32.686Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -211,17 +211,17 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2500,
+                      "duration": 1338,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3065] Lock detected — waiting for \"standard_user\" auth to complete\n"
+                          "text": "[Worker 2850] Acquiring lock for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3065] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 2850] Logging in as \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3065] Session valid — reusing saved state\n"
+                          "text": "[Worker 2850] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
                         }
                       ],
                       "stderr": [],
@@ -229,18 +229,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 167
+                          "duration": 157
                         },
                         {
                           "title": "Add 1 item(s) to cart",
-                          "duration": 150
+                          "duration": 162
                         },
                         {
                           "title": "Cart badge shows count 1",
-                          "duration": 142
+                          "duration": 145
                         }
                       ],
-                      "startTime": "2026-08-02T07:15:14.212Z",
+                      "startTime": "2026-08-02T07:35:32.669Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -287,17 +287,17 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1495,
+                      "duration": 1369,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3064] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 2850] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3064] Session valid — reusing saved state\n"
+                          "text": "[Worker 2850] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -305,18 +305,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 176
+                          "duration": 146
                         },
                         {
                           "title": "Add 2 item(s) to cart",
-                          "duration": 222
+                          "duration": 207
                         },
                         {
                           "title": "Cart badge shows count 2",
-                          "duration": 168
+                          "duration": 113
                         }
                       ],
-                      "startTime": "2026-08-02T07:15:17.337Z",
+                      "startTime": "2026-08-02T07:35:35.308Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -380,10 +380,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 898,
+                      "duration": 822,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -391,14 +391,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 296
+                          "duration": 273
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 164
+                          "duration": 144
                         }
                       ],
-                      "startTime": "2026-08-02T07:15:18.461Z",
+                      "startTime": "2026-08-02T07:35:36.152Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -445,10 +445,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 664,
+                      "duration": 616,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -456,14 +456,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 169
+                          "duration": 179
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 82
+                          "duration": 70
                         }
                       ],
-                      "startTime": "2026-08-02T07:15:18.966Z",
+                      "startTime": "2026-08-02T07:35:36.767Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -510,10 +510,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 550,
+                      "duration": 552,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -521,14 +521,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 116
+                          "duration": 130
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 52
+                          "duration": 49
                         }
                       ],
-                      "startTime": "2026-08-02T07:15:19.457Z",
+                      "startTime": "2026-08-02T07:35:37.074Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -569,8 +569,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-02T07:15:13.498Z",
-    "duration": 6587.997,
+    "startTime": "2026-08-02T07:35:32.093Z",
+    "duration": 5600.8949999999995,
     "expected": 6,
     "skipped": 0,
     "unexpected": 0,
