@@ -18,24 +18,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/bcb8f34befb302d7879fe47c8a229a41ea992b01",
-        "commitHash": "bcb8f34befb302d7879fe47c8a229a41ea992b01",
-        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30737227311"
+        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/f0e60aa480b918914f097feaa113d8398bd3d1c4",
+        "commitHash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
+        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30737424936"
       },
       "gitCommit": {
-        "shortHash": "bcb8f34",
-        "hash": "bcb8f34befb302d7879fe47c8a229a41ea992b01",
-        "subject": "fix: parse results.json for accurate test counts in summary",
-        "body": "fix: parse results.json for accurate test counts in summary\n",
+        "shortHash": "f0e60aa",
+        "hash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
+        "subject": "ci: add notice annotation with report URL to Actions run view",
+        "body": "ci: add notice annotation with report URL to Actions run view\n",
         "author": {
           "name": "OFFICE\\khinhtethtetkhine",
           "email": "khinhtethtet@2c2p.com",
-          "time": 1785654503000
+          "time": 1785654868000
         },
         "committer": {
           "name": "OFFICE\\khinhtethtetkhine",
           "email": "khinhtethtet@2c2p.com",
-          "time": 1785654503000
+          "time": 1785654868000
         },
         "branch": "main"
       },
@@ -49,24 +49,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/bcb8f34befb302d7879fe47c8a229a41ea992b01",
-            "commitHash": "bcb8f34befb302d7879fe47c8a229a41ea992b01",
-            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30737227311"
+            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/f0e60aa480b918914f097feaa113d8398bd3d1c4",
+            "commitHash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
+            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30737424936"
           },
           "gitCommit": {
-            "shortHash": "bcb8f34",
-            "hash": "bcb8f34befb302d7879fe47c8a229a41ea992b01",
-            "subject": "fix: parse results.json for accurate test counts in summary",
-            "body": "fix: parse results.json for accurate test counts in summary\n",
+            "shortHash": "f0e60aa",
+            "hash": "f0e60aa480b918914f097feaa113d8398bd3d1c4",
+            "subject": "ci: add notice annotation with report URL to Actions run view",
+            "body": "ci: add notice annotation with report URL to Actions run view\n",
             "author": {
               "name": "OFFICE\\khinhtethtetkhine",
               "email": "khinhtethtet@2c2p.com",
-              "time": 1785654503000
+              "time": 1785654868000
             },
             "committer": {
               "name": "OFFICE\\khinhtethtetkhine",
               "email": "khinhtethtet@2c2p.com",
-              "time": 1785654503000
+              "time": 1785654868000
             },
             "branch": "main"
           },
@@ -141,17 +141,17 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1456,
+                      "duration": 1345,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3133] Acquiring lock for \"standard_user\"\n"
+                          "text": "[Worker 3064] Acquiring lock for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3133] Logging in as \"standard_user\"\n"
+                          "text": "[Worker 3064] Logging in as \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3133] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
+                          "text": "[Worker 3064] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
                         }
                       ],
                       "stderr": [],
@@ -159,14 +159,14 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 173
+                          "duration": 192
                         },
                         {
                           "title": "Verify product count is 6",
-                          "duration": 172
+                          "duration": 183
                         }
                       ],
-                      "startTime": "2026-08-02T07:09:09.412Z",
+                      "startTime": "2026-08-02T07:15:14.204Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -211,17 +211,17 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2669,
+                      "duration": 2500,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3134] Lock detected — waiting for \"standard_user\" auth to complete\n"
+                          "text": "[Worker 3065] Lock detected — waiting for \"standard_user\" auth to complete\n"
                         },
                         {
-                          "text": "[Worker 3134] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 3065] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3134] Session valid — reusing saved state\n"
+                          "text": "[Worker 3065] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -229,18 +229,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 154
+                          "duration": 167
                         },
                         {
                           "title": "Add 1 item(s) to cart",
-                          "duration": 165
+                          "duration": 150
                         },
                         {
                           "title": "Cart badge shows count 1",
-                          "duration": 126
+                          "duration": 142
                         }
                       ],
-                      "startTime": "2026-08-02T07:09:09.409Z",
+                      "startTime": "2026-08-02T07:15:14.212Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -290,14 +290,14 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1523,
+                      "duration": 1495,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3133] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 3064] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3133] Session valid — reusing saved state\n"
+                          "text": "[Worker 3064] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -305,18 +305,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 174
+                          "duration": 176
                         },
                         {
                           "title": "Add 2 item(s) to cart",
-                          "duration": 223
+                          "duration": 222
                         },
                         {
                           "title": "Cart badge shows count 2",
-                          "duration": 144
+                          "duration": 168
                         }
                       ],
-                      "startTime": "2026-08-02T07:09:11.330Z",
+                      "startTime": "2026-08-02T07:15:17.337Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -383,7 +383,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 988,
+                      "duration": 898,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -391,14 +391,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 313
+                          "duration": 296
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 175
+                          "duration": 164
                         }
                       ],
-                      "startTime": "2026-08-02T07:09:12.503Z",
+                      "startTime": "2026-08-02T07:15:18.461Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -448,7 +448,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 672,
+                      "duration": 664,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -456,14 +456,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 150
+                          "duration": 169
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 64
+                          "duration": 82
                         }
                       ],
-                      "startTime": "2026-08-02T07:09:12.994Z",
+                      "startTime": "2026-08-02T07:15:18.966Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -513,7 +513,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 565,
+                      "duration": 550,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -525,10 +525,10 @@
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 49
+                          "duration": 52
                         }
                       ],
-                      "startTime": "2026-08-02T07:09:13.607Z",
+                      "startTime": "2026-08-02T07:15:19.457Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -569,8 +569,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-02T07:09:08.709Z",
-    "duration": 5549.95,
+    "startTime": "2026-08-02T07:15:13.498Z",
+    "duration": 6587.997,
     "expected": 6,
     "skipped": 0,
     "unexpected": 0,
