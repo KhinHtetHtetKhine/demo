@@ -11,7 +11,6 @@ on:
       - '.github/workflows/demo-playwright-ci.yml'
   workflow_dispatch:
 
-# Allow the job to write to gh-pages branch and post summaries
 permissions:
   contents: write
   pages: write
@@ -53,12 +52,23 @@ jobs:
       - name: Run Playwright tests
         run: npm test
 
-      # ── Option 3: inline summary in Actions UI ────────────────────────────
+      # ── Option 3: inline summary written to GitHub Actions job summary ────
       - name: Post test summary
         if: always()
-        uses: daun/playwright-report-summary@v3
-        with:
-          report-file: e2e-login-demo/playwright-report/index.html
+        run: |
+          REPORT="playwright-report/index.html"
+          PASSED=$(grep -o '[0-9]* passed' $REPORT | grep -o '[0-9]*' | head -1 || echo 0)
+          FAILED=$(grep -o '[0-9]* failed' $REPORT | grep -o '[0-9]*' | head -1 || echo 0)
+          SKIPPED=$(grep -o '[0-9]* skipped' $REPORT | grep -o '[0-9]*' | head -1 || echo 0)
+          echo "## 🎭 Playwright Test Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Status | Count |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| ✅ Passed  | ${PASSED:-0} |" >> $GITHUB_STEP_SUMMARY
+          echo "| ❌ Failed  | ${FAILED:-0} |" >> $GITHUB_STEP_SUMMARY
+          echo "| ⏭ Skipped | ${SKIPPED:-0} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📋 [View full report on GitHub Pages](https://khinhtethtetkhine.github.io/demo/playwright-report/)" >> $GITHUB_STEP_SUMMARY
 
       # ── Artifacts ─────────────────────────────────────────────────────────
       - name: Upload Playwright report
@@ -77,7 +87,7 @@ jobs:
           path: e2e-login-demo/test-results/
           retention-days: 7
 
-      # ── Option 2: publish full report to GitHub Pages ────────────────────
+      # ── Option 2: publish full report to GitHub Pages ─────────────────────
       - name: Deploy report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
