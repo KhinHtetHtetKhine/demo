@@ -52,7 +52,6 @@ jobs:
       - name: Run Playwright tests
         run: npm test
 
-      # ── Option 3: inline summary written to GitHub Actions job summary ────
       - name: Post test summary
         if: always()
         run: |
@@ -70,7 +69,6 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📋 [View full report on GitHub Pages](https://khinhtethtetkhine.github.io/demo/playwright-report/)" >> $GITHUB_STEP_SUMMARY
 
-      # ── Artifacts ─────────────────────────────────────────────────────────
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
@@ -87,7 +85,6 @@ jobs:
           path: e2e-login-demo/test-results/
           retention-days: 7
 
-      # ── Option 2: publish full report to GitHub Pages ─────────────────────
       - name: Deploy report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
