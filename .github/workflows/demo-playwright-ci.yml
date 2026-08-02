@@ -96,3 +96,13 @@ jobs:
           destination_dir: playwright-report
           keep_files: false
           commit_message: "ci: update Playwright report [${{ github.run_number }}]"
+
+      - name: Deploy root redirect to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: gh-pages-root
+          destination_dir: .
+          keep_files: true
+          commit_message: "ci: update root redirect"
