@@ -20,6 +20,9 @@ jobs:
         working-directory: e2e-login-demo
     env:
       PLAYWRIGHT_BROWSERS_PATH: ./.cache/ms-playwright
+      BASE_URL: https://www.saucedemo.com
+      AUTH_USERNAME: standard_user
+      AUTH_PASSWORD: secret_sauce
 
     steps:
       - name: Checkout repository
