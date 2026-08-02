@@ -3,11 +3,11 @@ name: Demo Playwright CI
 on:
   push:
     paths:
-      - 'Demo/**'
+      - 'e2e-login-demo/**'
       - '.github/workflows/demo-playwright-ci.yml'
   pull_request:
     paths:
-      - 'Demo/**'
+      - 'e2e-login-demo/**'
       - '.github/workflows/demo-playwright-ci.yml'
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: Demo
+        working-directory: e2e-login-demo
     env:
       PLAYWRIGHT_BROWSERS_PATH: ./.cache/ms-playwright
 
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: Demo/package-lock.json
+          cache-dependency-path: e2e-login-demo/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: Demo/playwright-report/
+          path: e2e-login-demo/playwright-report/
           retention-days: 7
 
       - name: Upload test results
@@ -57,5 +57,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: test-results
-          path: Demo/test-results/
+          path: e2e-login-demo/test-results/
           retention-days: 7

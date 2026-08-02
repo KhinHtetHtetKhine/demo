@@ -1,0 +1,22 @@
+{
+  "name": "e2e-login-demo",
+  "version": "1.0.0",
+  "description": "Interview demo for Playwright login automation using locators, page objects, tests, and CSV test data.",
+  "private": true,
+  "scripts": {
+    "test": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test",
+    "test:headed": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test --headed",
+    "test:qa": "cross-env TEST_ENV=qa PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test",
+    "test:uat": "cross-env TEST_ENV=uat PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test",
+    "test:login": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/login.spec.ts",
+    "test:inventory": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/inventory.spec.ts",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.13.10",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^5.8.2"
+  }
+}

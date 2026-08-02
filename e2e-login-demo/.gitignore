@@ -1,0 +1,15 @@
+node_modules/
+.cache/
+.npm-cache/
+.DS_Store
+playwright-report/
+test-results/
+
+# Saved auth state — contains session cookies, never commit
+playwright/.auth/
+
+# Environment files with credentials — never commit
+.env.qa
+.env.uat
+.env.prod
+# .env.example is safe to commit (no real values)

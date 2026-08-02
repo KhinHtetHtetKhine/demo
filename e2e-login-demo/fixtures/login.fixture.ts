@@ -1,4 +1,4 @@
-import { test as base } from '@playwright/test';
+import { base, makeAttachScreenshot } from './base.fixture';
 import { LoginPage } from '../src/pages/login.page';
 
 type LoginFixtures = {
@@ -8,17 +8,11 @@ type LoginFixtures = {
 
 export const test = base.extend<LoginFixtures>({
   attachScreenshot: async ({ page }, use, testInfo) => {
-    await use(async (name: string) => {
-      await testInfo.attach(name, {
-        body: await page.screenshot({ fullPage: true }),
-        contentType: 'image/png',
-      });
-    });
+    await use(makeAttachScreenshot(page, testInfo));
   },
 
   loginPage: async ({ page, attachScreenshot }, use) => {
     const loginPage = new LoginPage(page);
-
     await page.goto('/');
     await attachScreenshot('01-login-page-loaded');
     await use(loginPage);
@@ -26,3 +20,4 @@ export const test = base.extend<LoginFixtures>({
 });
 
 export { expect } from '@playwright/test';
+

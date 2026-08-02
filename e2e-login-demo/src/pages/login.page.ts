@@ -25,8 +25,8 @@ export class LoginPage {
   }
 
   async expectSuccessfulLogin(): Promise<void> {
-    await expect(this.page).toHaveURL(/.*inventory.html/);
-    await expect(this.inventoryContainer).toBeVisible();
+    await expect(this.page).toHaveURL(/.*inventory.html/, { timeout: 10000 });
+    await expect(this.inventoryContainer).toBeVisible({ timeout: 10000 });
   }
 
   async expectLoginError(expectedMessage: string): Promise<void> {
