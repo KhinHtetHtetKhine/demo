@@ -11,6 +11,12 @@ on:
       - '.github/workflows/demo-playwright-ci.yml'
   workflow_dispatch:
 
+# Allow the job to write to gh-pages branch and post summaries
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   test:
     name: Run Playwright Tests
@@ -47,6 +53,14 @@ jobs:
       - name: Run Playwright tests
         run: npm test
 
+      # ── Option 3: inline summary in Actions UI ────────────────────────────
+      - name: Post test summary
+        if: always()
+        uses: daun/playwright-report-summary@v3
+        with:
+          report-file: e2e-login-demo/playwright-report/index.html
+
+      # ── Artifacts ─────────────────────────────────────────────────────────
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
@@ -62,3 +76,14 @@ jobs:
           name: test-results
           path: e2e-login-demo/test-results/
           retention-days: 7
+
+      # ── Option 2: publish full report to GitHub Pages ────────────────────
+      - name: Deploy report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: e2e-login-demo/playwright-report
+          destination_dir: playwright-report
+          keep_files: false
+          commit_message: "ci: update Playwright report [${{ github.run_number }}]"
