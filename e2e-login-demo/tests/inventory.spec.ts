@@ -1,16 +1,3 @@
-/**
- * Inventory Tests — Authenticated Session Demo
- *
- * Demonstrates the auth-setup pattern (ported from paco_api):
- *   - First run  → logs in, saves storageState to playwright/.auth/standard_user-state.json
- *   - Subsequent runs → loads saved state, skips the login form entirely
- *   - Parallel workers → lock file prevents duplicate logins; workers share one session file
- *
- * Compare with login.spec.ts which tests the login form directly and intentionally
- * does NOT use saved state.
- *
- * Test data sourced from testdata/regression.csv (feature = 'inventory').
- */
 import { test, expect } from '../fixtures/authenticated.fixture';
 import { readRegressionCsv } from '../helpers/csv-reader';
 

@@ -7,6 +7,7 @@ const env = process.env.TEST_ENV ?? 'qa';
 dotenv.config({ path: path.resolve(__dirname, `.env.${env}`) });
 
 export default defineConfig({
+  globalTeardown: './global-teardown.ts',
   testDir: './tests',
   fullyParallel: true,
   reporter: [['html'], ['list'], ['json', { outputFile: 'playwright-report/results.json' }]],
