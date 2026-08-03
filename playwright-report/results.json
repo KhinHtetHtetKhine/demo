@@ -11,33 +11,33 @@
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
-    "globalTeardown": null,
+    "globalTeardown": "/home/runner/work/demo/demo/e2e-login-demo/global-teardown.ts",
     "globalTimeout": 0,
     "grep": {},
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/3d12f2b0e97091552693373bb6fd081e662cc447",
-        "commitHash": "3d12f2b0e97091552693373bb6fd081e662cc447",
-        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30738084648"
+        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/82545e3a824e2da76e1351e7d2489115d92249ed",
+        "commitHash": "82545e3a824e2da76e1351e7d2489115d92249ed",
+        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30808227281"
       },
       "gitCommit": {
-        "shortHash": "3d12f2b",
-        "hash": "3d12f2b0e97091552693373bb6fd081e662cc447",
-        "subject": "ci: add root redirect to playwright-report on GitHub Pages",
-        "body": "ci: add root redirect to playwright-report on GitHub Pages\n",
+        "shortHash": "82545e3",
+        "hash": "82545e3a824e2da76e1351e7d2489115d92249ed",
+        "subject": "feat: add global teardown to clear auth state after test runs",
+        "body": "feat: add global teardown to clear auth state after test runs\n",
         "author": {
           "name": "OFFICE\\khinhtethtetkhine",
           "email": "khinhtethtet@2c2p.com",
-          "time": 1785656087000
+          "time": 1785755201000
         },
         "committer": {
           "name": "OFFICE\\khinhtethtetkhine",
           "email": "khinhtethtet@2c2p.com",
-          "time": 1785656087000
+          "time": 1785755201000
         },
-        "branch": "main"
+        "branch": "feat/global-teardown-clear-auth"
       },
       "actualWorkers": 2
     },
@@ -49,26 +49,26 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/3d12f2b0e97091552693373bb6fd081e662cc447",
-            "commitHash": "3d12f2b0e97091552693373bb6fd081e662cc447",
-            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30738084648"
+            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/82545e3a824e2da76e1351e7d2489115d92249ed",
+            "commitHash": "82545e3a824e2da76e1351e7d2489115d92249ed",
+            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/30808227281"
           },
           "gitCommit": {
-            "shortHash": "3d12f2b",
-            "hash": "3d12f2b0e97091552693373bb6fd081e662cc447",
-            "subject": "ci: add root redirect to playwright-report on GitHub Pages",
-            "body": "ci: add root redirect to playwright-report on GitHub Pages\n",
+            "shortHash": "82545e3",
+            "hash": "82545e3a824e2da76e1351e7d2489115d92249ed",
+            "subject": "feat: add global teardown to clear auth state after test runs",
+            "body": "feat: add global teardown to clear auth state after test runs\n",
             "author": {
               "name": "OFFICE\\khinhtethtetkhine",
               "email": "khinhtethtet@2c2p.com",
-              "time": 1785656087000
+              "time": 1785755201000
             },
             "committer": {
               "name": "OFFICE\\khinhtethtetkhine",
               "email": "khinhtethtet@2c2p.com",
-              "time": 1785656087000
+              "time": 1785755201000
             },
-            "branch": "main"
+            "branch": "feat/global-teardown-clear-auth"
           },
           "actualWorkers": 2
         },
@@ -122,7 +122,7 @@
         {
           "title": "Inventory — authenticated via saved session",
           "file": "inventory.spec.ts",
-          "line": 19,
+          "line": 6,
           "column": 6,
           "specs": [
             {
@@ -141,17 +141,17 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2227,
+                      "duration": 2288,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 2849] Lock detected — waiting for \"standard_user\" auth to complete\n"
+                          "text": "[Worker 3066] Acquiring lock for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 2849] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 3066] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 2849] Session valid — reusing saved state\n"
+                          "text": "[Worker 3066] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -159,14 +159,14 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 122
+                          "duration": 196
                         },
                         {
                           "title": "Verify product count is 6",
-                          "duration": 100
+                          "duration": 165
                         }
                       ],
-                      "startTime": "2026-08-02T07:35:32.686Z",
+                      "startTime": "2026-08-03T11:07:37.908Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -192,7 +192,7 @@
               ],
               "id": "491382254a121adeeb47-2bd1aca75cd8df6c9df0",
               "file": "inventory.spec.ts",
-              "line": 21,
+              "line": 8,
               "column": 9
             },
             {
@@ -211,17 +211,17 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1338,
+                      "duration": 1871,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 2850] Acquiring lock for \"standard_user\"\n"
+                          "text": "[Worker 3072] Acquiring lock for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 2850] Logging in as \"standard_user\"\n"
+                          "text": "[Worker 3072] Logging in as \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 2850] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
+                          "text": "[Worker 3072] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
                         }
                       ],
                       "stderr": [],
@@ -229,18 +229,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 157
+                          "duration": 225
                         },
                         {
                           "title": "Add 1 item(s) to cart",
-                          "duration": 162
+                          "duration": 148
                         },
                         {
                           "title": "Cart badge shows count 1",
-                          "duration": 145
+                          "duration": 132
                         }
                       ],
-                      "startTime": "2026-08-02T07:35:32.669Z",
+                      "startTime": "2026-08-03T11:07:37.907Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -271,7 +271,7 @@
               ],
               "id": "491382254a121adeeb47-db28f8440a6392eb4d5f",
               "file": "inventory.spec.ts",
-              "line": 21,
+              "line": 8,
               "column": 9
             },
             {
@@ -290,14 +290,14 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1369,
+                      "duration": 1686,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 2850] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 3072] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 2850] Session valid — reusing saved state\n"
+                          "text": "[Worker 3072] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -305,18 +305,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 146
+                          "duration": 152
                         },
                         {
                           "title": "Add 2 item(s) to cart",
-                          "duration": 207
+                          "duration": 219
                         },
                         {
                           "title": "Cart badge shows count 2",
-                          "duration": 113
+                          "duration": 164
                         }
                       ],
-                      "startTime": "2026-08-02T07:35:35.308Z",
+                      "startTime": "2026-08-03T11:07:40.207Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -347,7 +347,7 @@
               ],
               "id": "491382254a121adeeb47-4c37a322dc99a7172a8e",
               "file": "inventory.spec.ts",
-              "line": 21,
+              "line": 8,
               "column": 9
             }
           ]
@@ -383,7 +383,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 822,
+                      "duration": 934,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -391,14 +391,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 273
+                          "duration": 256
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 144
+                          "duration": 159
                         }
                       ],
-                      "startTime": "2026-08-02T07:35:36.152Z",
+                      "startTime": "2026-08-03T11:07:40.581Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -445,10 +445,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 616,
+                      "duration": 684,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -456,14 +456,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 179
+                          "duration": 162
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 70
+                          "duration": 58
                         }
                       ],
-                      "startTime": "2026-08-02T07:35:36.767Z",
+                      "startTime": "2026-08-03T11:07:41.607Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -510,10 +510,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 552,
+                      "duration": 620,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -521,14 +521,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 130
+                          "duration": 118
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 49
+                          "duration": 47
                         }
                       ],
-                      "startTime": "2026-08-02T07:35:37.074Z",
+                      "startTime": "2026-08-03T11:07:42.040Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -569,8 +569,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-02T07:35:32.093Z",
-    "duration": 5600.8949999999995,
+    "startTime": "2026-08-03T11:07:37.166Z",
+    "duration": 5587.643999999999,
     "expected": 6,
     "skipped": 0,
     "unexpected": 0,
