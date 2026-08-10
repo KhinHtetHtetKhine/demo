@@ -1,6 +1,6 @@
 # e2e-login-demo
 
-A Playwright + TypeScript automation demo covering login testing, authenticated session reuse, page object model, CSV-driven tests, and multi-environment configuration.
+A Playwright + TypeScript automation demo covering login testing, authenticated session reuse, page object model, CSV-driven tests, multi-environment configuration, and browser-free API testing.
 
 ---
 
@@ -11,25 +11,35 @@ e2e-login-demo/
 ├── fixtures/
 │   ├── base.fixture.ts           # makeAttachScreenshot — shared screenshot utility
 │   ├── login.fixture.ts          # loginPage fixture, composes from base
-│   └── authenticated.fixture.ts  # pre-authenticated page via saved session, composes from base
+│   ├── authenticated.fixture.ts  # pre-authenticated page via saved session, composes from base
+│   └── api.fixture.ts            # dummyJsonApi fixture — binds DummyJsonClient to Playwright's `request`
 ├── helpers/
 │   ├── auth-setup.ts             # parallel-safe session cache (lock + storageState)
-│   └── csv-reader.ts             # shared CSV parser — readRegressionCsv()
+│   ├── csv-reader.ts             # shared CSV parser — readRegressionCsv()
+│   └── api-csv-reader.ts         # CSV parsers for API test data — readApiLoginCsv(), readApiUsersCsv()
 ├── locators/
 │   ├── login.locators.ts         # login form selectors
 │   └── inventory.locators.ts     # post-login inventory selectors
-├── src/pages/
-│   ├── login.page.ts             # LoginPage — actions + assertions
-│   └── inventory.page.ts         # InventoryPage — actions + assertions
+├── src/
+│   ├── pages/
+│   │   ├── login.page.ts         # LoginPage — actions + assertions
+│   │   └── inventory.page.ts     # InventoryPage — actions + assertions
+│   └── api/
+│       └── dummyjson.client.ts   # DummyJsonClient — thin wrapper over the DummyJSON demo API
 ├── testdata/
-│   └── regression.csv            # unified test data — feature column discriminates suites
+│   ├── regression.csv            # unified UI test data — feature column discriminates suites
+│   ├── api-login.csv             # API auth test cases
+│   └── api-users.csv             # API users CRUD test cases
 ├── tests/
 │   ├── login.spec.ts             # Login form tests (no session cache)
-│   └── inventory.spec.ts         # Inventory tests (authenticated via saved state)
+│   ├── inventory.spec.ts         # Inventory tests (authenticated via saved state)
+│   └── api/
+│       ├── auth.api.spec.ts      # POST /auth/login tests
+│       └── users.api.spec.ts     # /users CRUD tests
 ├── .env.example                  # Safe template — commit this
 ├── .env.qa                       # QA credentials — do NOT commit
 ├── .env.uat                      # UAT credentials — do NOT commit
-├── playwright.config.ts          # Loads .env.<TEST_ENV>, sets baseURL
+├── playwright.config.ts          # Loads .env.<TEST_ENV>, sets baseURL, defines chromium/firefox/api projects
 ├── package.json
 └── tsconfig.json
 ```
@@ -102,6 +112,7 @@ npm run test:uat
 # Run a specific feature suite
 npm run test:login
 npm run test:inventory
+npm run test:api
 
 # Run headed (visible browser)
 npm run test:headed
@@ -173,6 +184,47 @@ Tests post-login behaviour. Uses the `authenticatedPage` fixture which handles s
 | TC_INV_001 | Inventory page loads with 6 products |
 | TC_INV_002 | Add one item — cart badge shows 1 |
 | TC_INV_003 | Add two items — cart badge shows 2 |
+
+### `tests/api/auth.api.spec.ts` — Auth API tests (no browser)
+
+Hits `POST /auth/login` on the [DummyJSON](https://dummyjson.com) demo API directly via Playwright's built-in `request` fixture — no browser is launched. Mirrors `login.spec.ts` at the HTTP layer: valid credentials, a missing field, and a wrong-password case.
+
+| ID | Scenario | Expected |
+|---|---|---|
+| TC_API_LOGIN_001 | Valid credentials | 200 + `accessToken` |
+| TC_API_LOGIN_002 | Missing password | 400 + "Username and password required" |
+| TC_API_LOGIN_003 | Wrong password | 400 + "Invalid credentials" |
+
+### `tests/api/users.api.spec.ts` — Users API tests (no browser)
+
+Covers the CRUD surface of `/users`. Each CSV row's `operation` column drives which `DummyJsonClient` method the test calls — the same "branch on the data" style as `inventory.spec.ts`.
+
+| ID | Scenario | Expected |
+|---|---|---|
+| TC_API_USERS_001 | List users | 200 + non-empty `users[]` |
+| TC_API_USERS_002 | Get an existing user | 200 |
+| TC_API_USERS_003 | Get a non-existent user | 404 |
+| TC_API_USERS_004 | Create a user | 201 |
+| TC_API_USERS_005 | Update a user | 200 |
+| TC_API_USERS_006 | Delete a user | 200 + `isDeleted: true` |
+
+---
+
+## API Testing
+
+API tests run under a separate Playwright **project** (`api`, see `playwright.config.ts`) that has no `use.<device>` — it skips browser launch entirely and uses Playwright's built-in `request` fixture, bound to `API_BASE_URL`. The `chromium`/`firefox` projects set `testIgnore: '**/api/**'` so they never pick up API specs, and the `api` project's `testDir: './tests/api'` keeps it from picking up UI specs.
+
+`src/api/dummyjson.client.ts` wraps the raw `request` calls the same way `src/pages/*.page.ts` wraps browser actions — a thin, typed layer that test files call into instead of building requests inline. `fixtures/api.fixture.ts` binds an instance of the client to a `dummyJsonApi` fixture, so specs never construct it directly.
+
+Test data lives in `testdata/api-login.csv` and `testdata/api-users.csv`, parsed by `helpers/api-csv-reader.ts` — the same CSV-driven pattern as the UI suites, kept as separate files here since the two endpoints don't share a schema.
+
+```bash
+npm run test:api
+npx playwright test --project=api --grep "TC_API_USERS"
+```
+
+**Why DummyJSON instead of ReqRes?**
+The original draft targeted [reqres.in](https://reqres.in), which historically required no signup. ReqRes has since locked its endpoints behind a registered API key (`401 missing_api_key`) for its free tier. [DummyJSON](https://dummyjson.com) has no such requirement and offers the same shape of demo surface — `/auth/login` plus full `/users` CRUD — so it's a drop-in replacement for a zero-setup demo.
 
 ---
 

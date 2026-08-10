@@ -1,0 +1,4 @@
+testCaseNumber,testCase,username,password,expectedStatus,expectedError
+TC_API_LOGIN_001,Valid login returns an access token,emilys,emilyspass,200,
+TC_API_LOGIN_002,Missing password returns an error,emilys,,400,Username and password required
+TC_API_LOGIN_003,Wrong password returns an error,emilys,wrongpass,400,Invalid credentials

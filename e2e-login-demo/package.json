@@ -10,6 +10,7 @@
     "test:uat": "cross-env TEST_ENV=uat PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test",
     "test:login": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/login.spec.ts",
     "test:inventory": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/inventory.spec.ts",
+    "test:api": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test --project=api",
     "report": "playwright show-report"
   },
   "devDependencies": {

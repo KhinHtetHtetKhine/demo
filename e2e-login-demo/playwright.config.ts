@@ -18,7 +18,20 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testIgnore: '**/api/**',
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'firefox',
+      testIgnore: '**/api/**',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      // API tests don't need a browser — they use Playwright's built-in
+      // `request` fixture, bound to this project's baseURL.
+      name: 'api',
+      testDir: './tests/api',
+      use: { baseURL: process.env.API_BASE_URL ?? 'https://dummyjson.com' },
     },
   ],
 });
