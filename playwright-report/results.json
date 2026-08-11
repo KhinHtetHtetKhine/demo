@@ -18,24 +18,24 @@
     "maxFailures": 0,
     "metadata": {
       "ci": {
-        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-        "commitHash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31450609834"
+        "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/e99ece873432adb37a0b70119e01aa0799974a85",
+        "commitHash": "e99ece873432adb37a0b70119e01aa0799974a85",
+        "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31451714136"
       },
       "gitCommit": {
-        "shortHash": "37c57b1",
-        "hash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-        "subject": "feat: clear stale auth state before CI runs via globalSetup",
-        "body": "feat: clear stale auth state before CI runs via globalSetup\n\nAdds global-setup.ts, wired into playwright.config.ts, that wipes\nplaywright/.auth/*-state.json when CI=true so a stale session from a\nreused/cached runner can never leak into a run. Local runs are\nunaffected — the session cache still persists across runs there.\n",
+        "shortHash": "e99ece8",
+        "hash": "e99ece873432adb37a0b70119e01aa0799974a85",
+        "subject": "chore: trim comment in global-setup.ts",
+        "body": "chore: trim comment in global-setup.ts\n",
         "author": {
           "name": "khinhtet",
           "email": "khinhtethtetkhine965@gmail.com",
-          "time": 1786413118000
+          "time": 1786414396000
         },
         "committer": {
           "name": "khinhtet",
           "email": "khinhtethtetkhine965@gmail.com",
-          "time": 1786413118000
+          "time": 1786414396000
         },
         "branch": "main"
       },
@@ -49,24 +49,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "commitHash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31450609834"
+            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/e99ece873432adb37a0b70119e01aa0799974a85",
+            "commitHash": "e99ece873432adb37a0b70119e01aa0799974a85",
+            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31451714136"
           },
           "gitCommit": {
-            "shortHash": "37c57b1",
-            "hash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "subject": "feat: clear stale auth state before CI runs via globalSetup",
-            "body": "feat: clear stale auth state before CI runs via globalSetup\n\nAdds global-setup.ts, wired into playwright.config.ts, that wipes\nplaywright/.auth/*-state.json when CI=true so a stale session from a\nreused/cached runner can never leak into a run. Local runs are\nunaffected — the session cache still persists across runs there.\n",
+            "shortHash": "e99ece8",
+            "hash": "e99ece873432adb37a0b70119e01aa0799974a85",
+            "subject": "chore: trim comment in global-setup.ts",
+            "body": "chore: trim comment in global-setup.ts\n",
             "author": {
               "name": "khinhtet",
               "email": "khinhtethtetkhine965@gmail.com",
-              "time": 1786413118000
+              "time": 1786414396000
             },
             "committer": {
               "name": "khinhtet",
               "email": "khinhtethtetkhine965@gmail.com",
-              "time": 1786413118000
+              "time": 1786414396000
             },
             "branch": "main"
           },
@@ -89,24 +89,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "commitHash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31450609834"
+            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/e99ece873432adb37a0b70119e01aa0799974a85",
+            "commitHash": "e99ece873432adb37a0b70119e01aa0799974a85",
+            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31451714136"
           },
           "gitCommit": {
-            "shortHash": "37c57b1",
-            "hash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "subject": "feat: clear stale auth state before CI runs via globalSetup",
-            "body": "feat: clear stale auth state before CI runs via globalSetup\n\nAdds global-setup.ts, wired into playwright.config.ts, that wipes\nplaywright/.auth/*-state.json when CI=true so a stale session from a\nreused/cached runner can never leak into a run. Local runs are\nunaffected — the session cache still persists across runs there.\n",
+            "shortHash": "e99ece8",
+            "hash": "e99ece873432adb37a0b70119e01aa0799974a85",
+            "subject": "chore: trim comment in global-setup.ts",
+            "body": "chore: trim comment in global-setup.ts\n",
             "author": {
               "name": "khinhtet",
               "email": "khinhtethtetkhine965@gmail.com",
-              "time": 1786413118000
+              "time": 1786414396000
             },
             "committer": {
               "name": "khinhtet",
               "email": "khinhtethtetkhine965@gmail.com",
-              "time": 1786413118000
+              "time": 1786414396000
             },
             "branch": "main"
           },
@@ -129,24 +129,24 @@
         "retries": 0,
         "metadata": {
           "ci": {
-            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "commitHash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31450609834"
+            "commitHref": "https://github.com/KhinHtetHtetKhine/demo/commit/e99ece873432adb37a0b70119e01aa0799974a85",
+            "commitHash": "e99ece873432adb37a0b70119e01aa0799974a85",
+            "buildHref": "https://github.com/KhinHtetHtetKhine/demo/actions/runs/31451714136"
           },
           "gitCommit": {
-            "shortHash": "37c57b1",
-            "hash": "37c57b18bc0bfce355077c5a82226bbb6dad01ce",
-            "subject": "feat: clear stale auth state before CI runs via globalSetup",
-            "body": "feat: clear stale auth state before CI runs via globalSetup\n\nAdds global-setup.ts, wired into playwright.config.ts, that wipes\nplaywright/.auth/*-state.json when CI=true so a stale session from a\nreused/cached runner can never leak into a run. Local runs are\nunaffected — the session cache still persists across runs there.\n",
+            "shortHash": "e99ece8",
+            "hash": "e99ece873432adb37a0b70119e01aa0799974a85",
+            "subject": "chore: trim comment in global-setup.ts",
+            "body": "chore: trim comment in global-setup.ts\n",
             "author": {
               "name": "khinhtet",
               "email": "khinhtethtetkhine965@gmail.com",
-              "time": 1786413118000
+              "time": 1786414396000
             },
             "committer": {
               "name": "khinhtet",
               "email": "khinhtethtetkhine965@gmail.com",
-              "time": 1786413118000
+              "time": 1786414396000
             },
             "branch": "main"
           },
@@ -221,17 +221,17 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1632,
+                      "duration": 1308,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3062] Acquiring lock for \"standard_user\"\n"
+                          "text": "[Worker 2965] Acquiring lock for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3062] Logging in as \"standard_user\"\n"
+                          "text": "[Worker 2965] Logging in as \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3062] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
+                          "text": "[Worker 2965] Auth state saved → /home/runner/work/demo/demo/e2e-login-demo/playwright/.auth/standard_user-state.json\n"
                         }
                       ],
                       "stderr": [],
@@ -239,14 +239,14 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 269
+                          "duration": 146
                         },
                         {
                           "title": "Verify product count is 6",
-                          "duration": 124
+                          "duration": 122
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:37.484Z",
+                      "startTime": "2026-08-11T02:13:56.144Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -291,17 +291,17 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2404,
+                      "duration": 3550,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3061] Acquiring lock for \"standard_user\"\n"
+                          "text": "[Worker 2966] Lock detected — waiting for \"standard_user\" auth to complete\n"
                         },
                         {
-                          "text": "[Worker 3061] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 2966] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3061] Session valid — reusing saved state\n"
+                          "text": "[Worker 2966] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -309,18 +309,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 195
+                          "duration": 158
                         },
                         {
                           "title": "Add 1 item(s) to cart",
-                          "duration": 181
+                          "duration": 152
                         },
                         {
                           "title": "Cart badge shows count 1",
-                          "duration": 124
+                          "duration": 112
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:37.460Z",
+                      "startTime": "2026-08-11T02:13:56.158Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -370,14 +370,14 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1619,
+                      "duration": 1435,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "[Worker 3062] Validating existing auth for \"standard_user\"\n"
+                          "text": "[Worker 2965] Validating existing auth for \"standard_user\"\n"
                         },
                         {
-                          "text": "[Worker 3062] Session valid — reusing saved state\n"
+                          "text": "[Worker 2965] Session valid — reusing saved state\n"
                         }
                       ],
                       "stderr": [],
@@ -385,18 +385,18 @@
                       "steps": [
                         {
                           "title": "Verify inventory page is loaded",
-                          "duration": 192
+                          "duration": 117
                         },
                         {
                           "title": "Add 2 item(s) to cart",
-                          "duration": 237
+                          "duration": 186
                         },
                         {
                           "title": "Cart badge shows count 2",
-                          "duration": 145
+                          "duration": 94
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:39.542Z",
+                      "startTime": "2026-08-11T02:13:57.765Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -444,7 +444,7 @@
                   "results": [
                     {
                       "workerIndex": 2,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "failed",
                       "duration": 4,
                       "error": {
@@ -459,7 +459,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-11T01:52:42.625Z",
+                      "startTime": "2026-08-11T02:14:01.110Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -497,9 +497,9 @@
                   "results": [
                     {
                       "workerIndex": 3,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 3,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
@@ -512,7 +512,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-11T01:52:42.641Z",
+                      "startTime": "2026-08-11T02:14:01.154Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -550,9 +550,9 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 2,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
@@ -565,7 +565,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-11T01:52:43.245Z",
+                      "startTime": "2026-08-11T02:14:01.581Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -619,10 +619,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 912,
+                      "duration": 791,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -630,14 +630,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 273
+                          "duration": 238
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 169
+                          "duration": 134
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:40.316Z",
+                      "startTime": "2026-08-11T02:13:59.272Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -684,10 +684,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 749,
+                      "duration": 616,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -695,14 +695,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 183
+                          "duration": 154
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 74
+                          "duration": 47
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:41.268Z",
+                      "startTime": "2026-08-11T02:14:00.060Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -749,10 +749,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 729,
+                      "duration": 565,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -760,14 +760,14 @@
                       "steps": [
                         {
                           "title": "Submit login details",
-                          "duration": 194
+                          "duration": 130
                         },
                         {
                           "title": "Validate login result",
-                          "duration": 69
+                          "duration": 49
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:41.337Z",
+                      "startTime": "2026-08-11T02:14:00.144Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -815,9 +815,9 @@
                   "results": [
                     {
                       "workerIndex": 5,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
@@ -830,7 +830,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-11T01:52:43.252Z",
+                      "startTime": "2026-08-11T02:14:01.617Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -867,8 +867,8 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
                       "status": "failed",
                       "duration": 3,
                       "error": {
@@ -883,7 +883,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-11T01:52:43.839Z",
+                      "startTime": "2026-08-11T02:14:02.013Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -920,10 +920,10 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 1,
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 3,
+                      "duration": 4,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at /home/runner/work/demo/demo/e2e-login-demo/.cache/ms-playwright/firefox-1532/firefox/firefox\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     npx playwright install                                 ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝"
@@ -936,7 +936,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-08-11T01:52:43.843Z",
+                      "startTime": "2026-08-11T02:14:02.069Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -993,7 +993,7 @@
                       "workerIndex": 8,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 615,
+                      "duration": 714,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1001,18 +1001,18 @@
                       "steps": [
                         {
                           "title": "Send login request",
-                          "duration": 561
+                          "duration": 675
                         },
                         {
                           "title": "Expect status 200",
-                          "duration": 5
+                          "duration": 3
                         },
                         {
                           "title": "Validate response body",
-                          "duration": 3
+                          "duration": 2
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:44.413Z",
+                      "startTime": "2026-08-11T02:14:02.461Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1047,7 +1047,7 @@
                       "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 512,
+                      "duration": 595,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1055,18 +1055,18 @@
                       "steps": [
                         {
                           "title": "Send login request",
-                          "duration": 470
+                          "duration": 561
                         },
                         {
                           "title": "Expect status 400",
-                          "duration": 4
+                          "duration": 3
                         },
                         {
                           "title": "Validate response body",
-                          "duration": 2
+                          "duration": 3
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:44.458Z",
+                      "startTime": "2026-08-11T02:14:02.511Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1101,7 +1101,7 @@
                       "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 172,
+                      "duration": 148,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1109,7 +1109,7 @@
                       "steps": [
                         {
                           "title": "Send login request",
-                          "duration": 158
+                          "duration": 134
                         },
                         {
                           "title": "Expect status 400",
@@ -1120,7 +1120,7 @@
                           "duration": 1
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.042Z",
+                      "startTime": "2026-08-11T02:14:03.157Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1172,7 +1172,7 @@
                       "workerIndex": 8,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 148,
+                      "duration": 109,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1180,18 +1180,18 @@
                       "steps": [
                         {
                           "title": "Perform 'list' request",
-                          "duration": 123
+                          "duration": 96
                         },
                         {
                           "title": "Expect status 200",
-                          "duration": 2
+                          "duration": 1
                         },
                         {
                           "title": "Validate response body",
                           "duration": 3
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.102Z",
+                      "startTime": "2026-08-11T02:14:03.228Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1226,7 +1226,7 @@
                       "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 141,
+                      "duration": 112,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1234,7 +1234,7 @@
                       "steps": [
                         {
                           "title": "Perform 'get' request",
-                          "duration": 121
+                          "duration": 100
                         },
                         {
                           "title": "Expect status 200",
@@ -1242,10 +1242,10 @@
                         },
                         {
                           "title": "Validate response body",
-                          "duration": 2
+                          "duration": 1
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.242Z",
+                      "startTime": "2026-08-11T02:14:03.323Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1280,7 +1280,7 @@
                       "workerIndex": 8,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 132,
+                      "duration": 99,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1288,7 +1288,7 @@
                       "steps": [
                         {
                           "title": "Perform 'get' request",
-                          "duration": 115
+                          "duration": 85
                         },
                         {
                           "title": "Expect status 404",
@@ -1299,7 +1299,7 @@
                           "duration": 0
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.274Z",
+                      "startTime": "2026-08-11T02:14:03.353Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1334,7 +1334,7 @@
                       "workerIndex": 9,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 137,
+                      "duration": 119,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1342,7 +1342,7 @@
                       "steps": [
                         {
                           "title": "Perform 'create' request",
-                          "duration": 117
+                          "duration": 101
                         },
                         {
                           "title": "Expect status 201",
@@ -1353,7 +1353,7 @@
                           "duration": 3
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.415Z",
+                      "startTime": "2026-08-11T02:14:03.453Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1388,7 +1388,7 @@
                       "workerIndex": 8,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 140,
+                      "duration": 98,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1396,18 +1396,18 @@
                       "steps": [
                         {
                           "title": "Perform 'update' request",
-                          "duration": 117
+                          "duration": 84
                         },
                         {
                           "title": "Expect status 200",
-                          "duration": 1
+                          "duration": 0
                         },
                         {
                           "title": "Validate response body",
-                          "duration": 7
+                          "duration": 1
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.437Z",
+                      "startTime": "2026-08-11T02:14:03.473Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1439,10 +1439,10 @@
                   "projectName": "api",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 0,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 146,
+                      "duration": 108,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -1450,18 +1450,18 @@
                       "steps": [
                         {
                           "title": "Perform 'delete' request",
-                          "duration": 128
+                          "duration": 90
                         },
                         {
                           "title": "Expect status 200",
-                          "duration": 1
+                          "duration": 0
                         },
                         {
                           "title": "Validate response body",
                           "duration": 1
                         }
                       ],
-                      "startTime": "2026-08-11T01:52:45.583Z",
+                      "startTime": "2026-08-11T02:14:03.595Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -1487,8 +1487,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-11T01:52:36.674Z",
-    "duration": 9096.903999999999,
+    "startTime": "2026-08-11T02:13:55.548Z",
+    "duration": 8186.300000000001,
     "expected": 15,
     "skipped": 0,
     "unexpected": 6,
