@@ -1,14 +1,3 @@
-/**
- * Auth API Tests — DummyJSON demo API
- *
- * Hits POST /auth/login directly (no browser) via Playwright's built-in
- * APIRequestContext, wrapped by DummyJsonClient (src/api/dummyjson.client.ts).
- * Mirrors tests/login.spec.ts at the API layer — same idea (valid /
- * missing-field / wrong-password cases), CSV-driven test data.
- *
- * Test data sourced from testdata/api-login.csv.
- * Runs under the 'api' Playwright project (see playwright.config.ts).
- */
 import { test, expect } from '../../fixtures/api.fixture';
 import { readApiLoginCsv } from '../../helpers/api-csv-reader';
 
