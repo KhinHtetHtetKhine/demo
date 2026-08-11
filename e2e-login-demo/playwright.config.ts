@@ -8,6 +8,7 @@ dotenv.config({ path: path.resolve(__dirname, `.env.${env}`) });
 
 export default defineConfig({
   testDir: './tests',
+  globalSetup: require.resolve('./global-setup'),
   fullyParallel: true,
   reporter: [['html'], ['list'], ['json', { outputFile: 'playwright-report/results.json' }]],
   use: {

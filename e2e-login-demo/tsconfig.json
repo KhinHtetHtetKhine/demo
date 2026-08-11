@@ -9,5 +9,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["fixtures", "locators", "src", "tests", "playwright.config.ts"]
+  "include": ["fixtures", "helpers", "locators", "src", "tests", "playwright.config.ts", "global-setup.ts"]
 }
