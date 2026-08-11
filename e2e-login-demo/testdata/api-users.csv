@@ -1,7 +1,0 @@
-testCaseNumber,testCase,operation,userId,firstName,age,expectedStatus
-TC_API_USERS_001,List users returns paginated data,list,,,,200
-TC_API_USERS_002,Get an existing user by id,get,2,,,200
-TC_API_USERS_003,Get a non-existent user returns 404,get,999999,,,404
-TC_API_USERS_004,Create a new user,create,,Morpheus,40,201
-TC_API_USERS_005,Update an existing user,update,2,Neo,,200
-TC_API_USERS_006,Delete an existing user,delete,2,,,200

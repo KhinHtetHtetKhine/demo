@@ -28,8 +28,7 @@ e2e-login-demo/
 │       └── dummyjson.client.ts   # DummyJsonClient — thin wrapper over the DummyJSON demo API
 ├── testdata/
 │   ├── regression.csv            # unified UI test data — feature column discriminates suites
-│   ├── api-login.csv             # API auth test cases
-│   └── api-users.csv             # API users CRUD test cases
+│   └── api-regression.csv        # unified API test data — feature column discriminates suites
 ├── tests/
 │   ├── login.spec.ts             # Login form tests (no session cache)
 │   ├── inventory.spec.ts         # Inventory tests (authenticated via saved state)
@@ -216,7 +215,12 @@ API tests run under a separate Playwright **project** (`api`, see `playwright.co
 
 `src/api/dummyjson.client.ts` wraps the raw `request` calls the same way `src/pages/*.page.ts` wraps browser actions — a thin, typed layer that test files call into instead of building requests inline. `fixtures/api.fixture.ts` binds an instance of the client to a `dummyJsonApi` fixture, so specs never construct it directly.
 
-Test data lives in `testdata/api-login.csv` and `testdata/api-users.csv`, parsed by `helpers/api-csv-reader.ts` — the same CSV-driven pattern as the UI suites, kept as separate files here since the two endpoints don't share a schema.
+Test data lives in a single `testdata/api-regression.csv`, parsed by `helpers/api-csv-reader.ts` — the same `feature`-discriminator pattern as `testdata/regression.csv` for the UI suites (see "Why one `regression.csv` instead of separate files per feature?" below). Each spec filters to its own rows:
+
+```ts
+const loginCases = readApiRegressionCsv().filter((r) => r.feature === 'login');
+const userCases  = readApiRegressionCsv().filter((r) => r.feature === 'users');
+```
 
 ```bash
 npm run test:api

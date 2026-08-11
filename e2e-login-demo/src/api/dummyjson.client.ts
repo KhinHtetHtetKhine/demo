@@ -12,12 +12,6 @@ export type UserPayload = {
   age?: number;
 };
 
-/**
- * Thin wrapper around the DummyJSON demo API (https://dummyjson.com) — mirrors
- * the Page Object pattern used for UI tests (src/pages/*.page.ts), but for
- * HTTP calls instead of browser actions. No API key or signup is required:
- * these are the public demo endpoints (/auth/login, /users).
- */
 export class DummyJsonClient {
   constructor(private readonly request: APIRequestContext) {}
 

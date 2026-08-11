@@ -1,20 +1,8 @@
-/**
- * Users API Tests — DummyJSON demo API
- *
- * Covers the CRUD surface of /users via Playwright's built-in
- * APIRequestContext, wrapped by DummyJsonClient (src/api/dummyjson.client.ts).
- *
- * Test data sourced from testdata/api-users.csv — each row's `operation`
- * column drives which endpoint the test exercises (list | get | create |
- * update | delete), the same "branch on the data" style as
- * tests/inventory.spec.ts.
- * Runs under the 'api' Playwright project (see playwright.config.ts).
- */
 import { APIResponse } from '@playwright/test';
 import { test, expect } from '../../fixtures/api.fixture';
-import { readApiUsersCsv } from '../../helpers/api-csv-reader';
+import { readApiRegressionCsv } from '../../helpers/api-csv-reader';
 
-const userCases = readApiUsersCsv();
+const userCases = readApiRegressionCsv().filter((r) => r.feature === 'users');
 
 test.describe('Users API — /users', () => {
   for (const data of userCases) {

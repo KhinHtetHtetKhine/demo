@@ -1,0 +1,10 @@
+feature,testCaseNumber,testCase,username,password,operation,userId,firstName,age,expectedStatus,expectedError
+login,TC_API_LOGIN_001,Valid login returns an access token,emilys,emilyspass,,,,,200,
+login,TC_API_LOGIN_002,Missing password returns an error,emilys,,,,,,400,Username and password required
+login,TC_API_LOGIN_003,Wrong password returns an error,emilys,wrongpass,,,,,400,Invalid credentials
+users,TC_API_USERS_001,List users returns paginated data,,,list,,,,200,
+users,TC_API_USERS_002,Get an existing user by id,,,get,2,,,200,
+users,TC_API_USERS_003,Get a non-existent user returns 404,,,get,999999,,,404,
+users,TC_API_USERS_004,Create a new user,,,create,,Morpheus,40,201,
+users,TC_API_USERS_005,Update an existing user,,,update,2,Neo,,200,
+users,TC_API_USERS_006,Delete an existing user,,,delete,2,,,200,

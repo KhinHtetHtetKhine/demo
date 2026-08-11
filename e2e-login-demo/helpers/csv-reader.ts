@@ -17,11 +17,7 @@ export type RegressionRow = {
   expectedItemCount: string;
 };
 
-/**
- * Read and parse regression.csv.
- * - Normalises CRLF → LF (Windows safety)
- * - Returns all rows; callers filter by `feature`
- */
+//Read and parse regression.csv.
 export function readRegressionCsv(): RegressionRow[] {
   const csvPath = path.resolve(__dirname, '../testdata/regression.csv');
   const [headerLine, ...rows] = fs

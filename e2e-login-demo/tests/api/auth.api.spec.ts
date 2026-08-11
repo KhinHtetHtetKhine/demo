@@ -1,7 +1,7 @@
 import { test, expect } from '../../fixtures/api.fixture';
-import { readApiLoginCsv } from '../../helpers/api-csv-reader';
+import { readApiRegressionCsv } from '../../helpers/api-csv-reader';
 
-const loginCases = readApiLoginCsv();
+const loginCases = readApiRegressionCsv().filter((r) => r.feature === 'login');
 
 test.describe('Auth API — POST /auth/login', () => {
   for (const data of loginCases) {

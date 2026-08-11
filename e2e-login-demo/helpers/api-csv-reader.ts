@@ -1,35 +1,28 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-/** Raw row from api-login.csv — all fields as strings. */
-export type ApiLoginRow = {
+/** Raw row from api-regression.csv — all fields as strings. */
+export type ApiRegressionRow = {
+  feature: string;
   testCaseNumber: string;
   testCase: string;
+  // login fields
   username: string;
   password: string;
-  expectedStatus: string;
   expectedError: string;
-};
-
-/** Raw row from api-users.csv — all fields as strings. */
-export type ApiUserRow = {
-  testCaseNumber: string;
-  testCase: string;
+  // users fields
   /** Drives which DummyJsonClient method the test calls: list | get | create | update | delete */
   operation: string;
   userId: string;
   firstName: string;
   age: string;
+  // shared
   expectedStatus: string;
 };
 
-/**
- * Generic CSV parser shared by both API test-data readers.
- * - Normalises CRLF → LF (Windows safety)
- * - Returns typed rows based on the header row
- */
-function parseCsv<T>(fileName: string): T[] {
-  const csvPath = path.resolve(__dirname, `../testdata/${fileName}`);
+//Read and parse api-regression.csv.
+export function readApiRegressionCsv(): ApiRegressionRow[] {
+  const csvPath = path.resolve(__dirname, '../testdata/api-regression.csv');
   const [headerLine, ...rows] = fs
     .readFileSync(csvPath, 'utf-8')
     .replace(/\r/g, '')
@@ -45,14 +38,6 @@ function parseCsv<T>(fileName: string): T[] {
       const record = Object.fromEntries(
         headers.map((header, i) => [header, values[i] ?? ''])
       );
-      return record as T;
+      return record as ApiRegressionRow;
     });
-}
-
-export function readApiLoginCsv(): ApiLoginRow[] {
-  return parseCsv<ApiLoginRow>('api-login.csv');
-}
-
-export function readApiUsersCsv(): ApiUserRow[] {
-  return parseCsv<ApiUserRow>('api-users.csv');
 }
