@@ -48,10 +48,15 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Run Playwright tests
-        run: npm test
+        run: |
+          if [ -z "$AUTH_USERNAME" ] || [ -z "$AUTH_PASSWORD" ]; then
+            echo "::error::Configure AUTH_USERNAME and AUTH_PASSWORD in repository Actions secrets."
+            exit 1
+          fi
+          npm test
         env:
-          AUTH_USERNAME: ${{ secrets.AUTH_USERNAME || 'standard_user' }}
-          AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD || 'secret_sauce' }}
+          AUTH_USERNAME: ${{ secrets.AUTH_USERNAME }}
+          AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD }}
 
       - name: Post test summary
         if: always()
