@@ -26,8 +26,6 @@ jobs:
     env:
       PLAYWRIGHT_BROWSERS_PATH: ./.cache/ms-playwright
       BASE_URL: https://www.saucedemo.com
-      AUTH_USERNAME: standard_user
-      AUTH_PASSWORD: secret_sauce
 
     steps:
       - name: Checkout repository
@@ -51,6 +49,9 @@ jobs:
 
       - name: Run Playwright tests
         run: npm test
+        env:
+          AUTH_USERNAME: ${{ secrets.AUTH_USERNAME || 'standard_user' }}
+          AUTH_PASSWORD: ${{ secrets.AUTH_PASSWORD || 'secret_sauce' }}
 
       - name: Post test summary
         if: always()
