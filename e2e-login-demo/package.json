@@ -8,8 +8,8 @@
     "test:headed": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test --headed",
     "test:qa": "cross-env TEST_ENV=qa PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test",
     "test:uat": "cross-env TEST_ENV=uat PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test",
-    "test:login": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/login.spec.ts",
-    "test:inventory": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/inventory.spec.ts",
+    "test:login": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/ui/login.spec.ts",
+    "test:inventory": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test tests/ui/inventory.spec.ts",
     "test:api": "cross-env PLAYWRIGHT_BROWSERS_PATH=./.cache/ms-playwright playwright test --project=api",
     "report": "playwright show-report"
   },

@@ -9,14 +9,14 @@ A Playwright + TypeScript automation demo covering login testing, authenticated 
 ```
 e2e-login-demo/
 ├── fixtures/
-│   ├── base.fixture.ts           # makeAttachScreenshot — shared screenshot utility
-│   ├── login.fixture.ts          # loginPage fixture, composes from base
-│   ├── authenticated.fixture.ts  # pre-authenticated page via saved session, composes from base
+│   ├── login.fixture.ts          # loginPage and attachScreenshot fixtures
+│   ├── authenticated.fixture.ts  # authenticated page and inventory fixtures
 │   └── api.fixture.ts            # dummyJsonApi fixture — binds DummyJsonClient to Playwright's `request`
 ├── helpers/
 │   ├── auth-setup.ts             # parallel-safe session cache (lock + storageState)
 │   ├── csv-reader.ts             # shared CSV parser — readRegressionCsv()
-│   └── api-csv-reader.ts         # CSV parsers for API test data — readApiLoginCsv(), readApiUsersCsv()
+│   ├── api-csv-reader.ts         # CSV parsers for API test data — readApiLoginCsv(), readApiUsersCsv()
+│   └── screenshot.helper.ts      # makeAttachScreenshot — shared screenshot attachment helper
 ├── locators/
 │   ├── login.locators.ts         # login form selectors
 │   └── inventory.locators.ts     # post-login inventory selectors
@@ -30,8 +30,9 @@ e2e-login-demo/
 │   ├── regression.csv            # unified UI test data — feature column discriminates suites
 │   └── api-regression.csv        # unified API test data — feature column discriminates suites
 ├── tests/
-│   ├── login.spec.ts             # Login form tests (no session cache)
-│   ├── inventory.spec.ts         # Inventory tests (authenticated via saved state)
+│   ├── ui/
+│   │   ├── login.spec.ts         # Login form tests (no session cache)
+│   │   └── inventory.spec.ts     # Inventory tests (authenticated via saved state)
 │   └── api/
 │       ├── auth.api.spec.ts      # POST /auth/login tests
 │       └── users.api.spec.ts     # /users CRUD tests
@@ -164,7 +165,7 @@ Columns irrelevant to a feature are left empty — no sparse data causes failure
 
 ## Test Suites
 
-### `tests/login.spec.ts` — Login form tests
+### `tests/ui/login.spec.ts` — Login form tests
 
 Tests the login form directly. Every test navigates to the login page and interacts with the form. No session cache is used — this is correct because the purpose is to verify the login form itself.
 
@@ -174,7 +175,7 @@ Tests the login form directly. Every test navigates to the login page and intera
 | TC_LOGIN_002 | Wrong password | Error message |
 | TC_LOGIN_003 | Locked out user | Locked error message |
 
-### `tests/inventory.spec.ts` — Inventory tests (authenticated)
+### `tests/ui/inventory.spec.ts` — Inventory tests (authenticated)
 
 Tests post-login behaviour. Uses the `authenticatedPage` fixture which handles session caching internally — the login form is never shown in these tests.
 
@@ -276,14 +277,14 @@ The `playwright/.auth/` directory is in `.gitignore` — session files are never
 **Why one `regression.csv` instead of separate files per feature?**
 A single file with a `feature` discriminator column mirrors how production suites work at scale — one data source, each spec filters its own rows. Columns irrelevant to a feature are left empty. This keeps data in one place, easy to review and extend, without schema explosion. For very large suites with fundamentally different data shapes, per-feature files become appropriate — but at this scale one file is cleaner.
 
-**Why a shared `base.fixture.ts`?**
-`attachScreenshot` was originally duplicated in both `login.fixture.ts` and `authenticated.fixture.ts`. Extracting `makeAttachScreenshot` into `base.fixture.ts` means the implementation lives in one place. Both fixtures call it with their own page — `page` for login, `authenticatedPage` for inventory. Adding a third fixture in future requires no duplication.
+**Why a shared screenshot helper?**
+`makeAttachScreenshot` from `helpers/screenshot.helper.ts` keeps screenshot attachment logic in one place. The specs bind it to their own page and `testInfo` for named checkpoints. The fixture modules extend Playwright's `test` directly without adding a separate screenshot fixture.
 
 **Why not a fixture per page object?**
 Fixtures own lifecycle — setup that runs before every test and teardown after. Page objects are just classes. New page objects get added as fixtures inside the existing `authenticated.fixture.ts`, not as new fixture files. A new fixture file is only warranted when there is a genuinely different session context — for example, an admin user or a guest session.
 
-**Why `attachScreenshot` instead of Playwright's built-in screenshot?**
-Playwright's built-in `screenshot: 'only-on-failure'` captures one snapshot at the end of a failed test. `attachScreenshot` captures named checkpoints at specific steps — before a click, after a submit, after validation — so you can see exactly which step broke when reviewing results. Screenshots are attached via `testInfo.attach()` so they appear inline in the HTML report for every test, pass or fail, without opening a separate trace viewer.
+**Why named screenshots in addition to Playwright's built-in screenshot?**
+Playwright's built-in `screenshot: 'only-on-failure'` captures a snapshot at the end of a failed test. The shared helper captures named checkpoints at specific steps — before a click, after a submit, after validation — so you can see exactly which step broke when reviewing results. Screenshots are attached via `testInfo.attach()` and appear in the HTML report for passing and failing tests.
 
 **Why `data-test` selectors?**
 `[data-test="..."]` attributes are stable test hooks that survive CSS and layout changes. They signal intent and don't break when styles are refactored.

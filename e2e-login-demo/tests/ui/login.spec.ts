@@ -1,11 +1,15 @@
-import { test } from '../fixtures/login.fixture';
-import { readRegressionCsv } from '../helpers/csv-reader';
+import { test } from '../../fixtures/login.fixture';
+import { readRegressionCsv } from '../../helpers/csv-reader';
+import { makeAttachScreenshot } from '../../helpers/screenshot.helper';
 
 const loginCases = readRegressionCsv().filter((r) => r.feature === 'login');
 
 test.describe('Login', () => {
   for (const data of loginCases) {
-    test(`${data.testCaseNumber} - ${data.testCase}`, async ({ loginPage, attachScreenshot }) => {
+    test(`${data.testCaseNumber} - ${data.testCase}`, async ({ loginPage, page }, testInfo) => {
+      const attachScreenshot = makeAttachScreenshot(page, testInfo);
+      await attachScreenshot('01-login-page-loaded');
+
       await test.step('Submit login details', async () => {
         await loginPage.login(data.username, data.password);
         await attachScreenshot('02-after-login-submit');

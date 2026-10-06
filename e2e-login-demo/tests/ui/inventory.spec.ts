@@ -1,11 +1,13 @@
-import { test, expect } from '../fixtures/authenticated.fixture';
-import { readRegressionCsv } from '../helpers/csv-reader';
+import { test, expect } from '../../fixtures/authenticated.fixture';
+import { readRegressionCsv } from '../../helpers/csv-reader';
+import { makeAttachScreenshot } from '../../helpers/screenshot.helper';
 
 const inventoryCases = readRegressionCsv().filter((r) => r.feature === 'inventory');
 
 test.describe('Inventory — authenticated via saved session', () => {
   for (const data of inventoryCases) {
-    test(`${data.testCaseNumber} - ${data.testCase}`, async ({ inventoryPage, attachScreenshot }) => {
+    test(`${data.testCaseNumber} - ${data.testCase}`, async ({ inventoryPage, authenticatedPage }, testInfo) => {
+      const attachScreenshot = makeAttachScreenshot(authenticatedPage, testInfo);
 
       await test.step('Verify inventory page is loaded', async () => {
         await inventoryPage.expectLoaded();
